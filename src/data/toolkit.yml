@@ -1,0 +1,71 @@
+bgcolors:
+  spectrum:
+    - primary
+    - secondary
+    - alert
+    - success
+    - warning
+    - darkest-gray
+    - darker-gray
+    - medium-dark-gray
+    - medium-gray
+    - light-gray
+    - lighter-gray
+    - medium-light-gray
+    - lightest-gray
+button:
+  colors:
+    secondary: secondary
+    success: success
+    alert: alert
+    warning: warning
+    disabled: disabled
+  sizes:
+    Tiny: tiny
+    Small: small
+    Large: large
+    Expanded: expanded
+app:
+  icon:
+    - search-large
+    - profile
+    - file-study
+    - list
+    - building
+    - virtual
+    - cabinet
+    - pill
+    - file-virtual
+    - arrow-right
+    - lock
+    - shrink
+    - plus-circle
+    - file-excel
+    - file-pdf
+    - file-word
+    - ls-logo
+    - zoom-in
+    - checkmark-box
+    - back-circle
+    - checkmark
+    - chevron-down
+    - close-circle
+    - close
+    - expand
+    - help
+    - info-circle
+    - minus-circle
+    - more-vert
+    - page-double-left
+    - page-double-right
+    - page-left
+    - page-right
+    - saved
+    - search
+    - star
+    - zoom-out
+    - nav-right
+    - settings
+    - plus
+    - check
+    - folder

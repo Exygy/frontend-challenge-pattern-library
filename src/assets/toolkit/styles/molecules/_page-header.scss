@@ -1,0 +1,15 @@
+.page-header {
+  @include flex-grid-row();
+  @include scut-padding(rem-calc(14) n);
+  position: relative;
+}
+
+.page-title {
+  @include breakpoint(small only) {
+	  @include scut-padding(n n n rem-calc(4));
+  }
+  @include scut-margin(rem-calc(74) n n n);
+  color: $white;
+  font-size: rem-calc(26);
+  font-weight: $font-weight-normal;
+}

@@ -1,0 +1,32 @@
+.reveal {
+  @include scut-padding(0);
+  border-radius: 4px;
+  overflow: visible;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.reveal-close {
+  position: absolute;
+  right: rem-calc(-14);
+  top: rem-calc(-18);
+
+	&:focus {
+		outline: none;
+	}
+
+  @include breakpoint(small only) {
+    right: rem-calc(16);
+    top: rem-calc(21);
+
+    .ui-icon {
+      @include scut-size(rem-calc(14));
+
+      svg use {
+        fill: $medium-gray !important;
+      }
+    }
+  }
+}

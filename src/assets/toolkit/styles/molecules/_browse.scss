@@ -1,0 +1,57 @@
+.browse-header {
+  @include scut-padding(rem-calc(21) n);
+
+  .hide-browse-link {
+    float: right;
+
+    .ui-icon {
+      @include scut-margin(rem-calc(-9) n n n);
+      @include scut-size(rem-calc(14));
+    }
+  }
+}
+
+.browse-header-title {
+  font-size: 0.75rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.browse-stage {
+  @include canvas;
+
+  .layout-header,
+  .full-header {
+    background-color: transparent;
+
+    .header-bar {
+      @include scut-padding(rem-calc(4) n rem-calc(13) n);
+    }
+  }
+
+  .header-bar-header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .pagination {
+    display: none;
+    z-index: 20;
+
+    &.top {
+      @include scut-margin(rem-calc(8) n n n);
+      position: absolute;
+      right: 1rem;
+    }
+
+    &.bottom {
+      @include scut-margin(rem-calc(14) n n n);
+      text-align: right;
+    }
+  }
+}
+
+.browse-slat-template {
+  display: none;
+}

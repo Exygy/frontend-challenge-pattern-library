@@ -1,0 +1,19 @@
+#{text-inputs()} {
+  &.rounded {
+    border-radius: rem-calc(100);
+  }
+}
+
+.icon-input-group {
+  position: relative;
+}
+
+.icon-input {
+  @include scut-padding(n 1.5rem);
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.icon-input-icon {
+  @include absolute(1rem,1rem,null,null);
+}  

@@ -1,0 +1,12 @@
+<li id="nav-item-{{default nav-class 'tasks'}}"
+    class="{{default classes ''}} {{#compare active '==' nav-class}} active {{/compare}} {{#if mobile}} hide-for-large {{/if }}">
+  <a href="{{default url '#'}}">
+  {{#if icon-before}}
+    {{> icons.icon-base }}
+  {{/if}}
+  <span>{{default nav-text 'Text'}}</span>
+  {{#if icon-after}}
+    {{> icons.icon-base }}
+  {{/if}}
+  </a>
+</li>

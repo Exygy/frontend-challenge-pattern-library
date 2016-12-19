@@ -1,0 +1,41 @@
+.photo-avatar {
+  @include scut-size(rem-calc(30));
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    @include scut-size(rem-calc(30));
+  }
+}
+
+.avatar-initials {
+  @include scut-size(rem-calc(30));
+  background-color: $darkest-blue;
+  border-radius: 50%;
+  color: $white;
+  display: inline-block;
+  font-size: 0.875rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &.color-0 {
+    background-color: $darker-blue;
+  }
+
+  &.color-1 {
+    background-color: $dark-green;
+  }
+
+  &.color-2 {
+    background-color: $red-orange;
+  }
+
+  &.color-3 {
+    background-color: $purple;
+  }
+}
+
+.avatar-initials-text {
+  @include scut-center-transform();
+}

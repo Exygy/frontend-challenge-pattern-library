@@ -1,0 +1,34 @@
+<div class="title-full-header full-header {{default classes ''}}">
+  <div class="header-bar title-bar">
+    <span class="header-bar-icon title-bar-icon">
+      {{> icons.icon-base icon=(fileIconName (default type 'word')) fill=(default type 'word') size="xlarge"}}
+    </span>
+    <div class="title-bar-header">
+      <h1 class="title-bar-doc-title">
+        {{default doc-title 'Commonwealth of Virginia'}}
+      </h1>
+      <h2 class="title-bar-doc-subtitle">
+        <span class="title-bar-doc-subtitle-prefix">
+          {{default subtitle-prefix 'Title:'}}
+        </span>
+        <span class="title-bar-doc-subtitle-content">
+          {{default subtitle-content '16.1.4 List of Investigators'}}
+        </span>
+      </h2>
+    </div>
+
+    <div class="title-bar-content">
+      <div class="title-bar-more">
+        <a class="button hollow secondary round-icon no-margin" href="#" data-toggle="document-dropdown">{{> icons.icon-base icon="more-vert" size="base"}}</a>
+
+        {{> components.dropdown type="panel" items=dropdown.document id="document-dropdown" }}
+      </div>
+    </div>
+  </div>
+  <div class="hidden-icon-templates">
+    <span class="icon-word-template">{{> icons.icon-base icon=(fileIconName 'word') fill='word' size='xlarge'}}</span>
+    <span class="icon-excel-template">{{> icons.icon-base icon=(fileIconName 'excel') fill='excel' size='xlarge'}}</span>
+    <span class="icon-pdf-template">{{> icons.icon-base icon=(fileIconName 'pdf') fill='pdf' size='xlarge'}}</span>
+    <span class="icon-virtual-template">{{> icons.icon-base icon=(fileIconName 'virtual') fill='virtual' size='xlarge'}}</span>
+  </div>
+</div>

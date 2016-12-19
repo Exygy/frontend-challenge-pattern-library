@@ -1,0 +1,47 @@
+<nav class="top-bar nav-bar {{default classes ''}}">
+
+  <div class="top-bar-title nav-logo">
+    <a href="/pages/home.html">
+      <span class="nav-bar-logo">
+      {{> icons.icon-base icon="ls-logo" classes="" size="base" fill="white"}}
+      </span>
+      Life Sciences
+    </a>
+  </div>
+
+  <div class="top-bar-left">
+    <nav class="main-navigation">
+      <ul class="menu">
+        {{#each navigation.site-sections icon="false" icon-after="true"}}
+          {{> navigation.nav-item-base active=../active}}
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="top-bar-right">
+    <nav class="secondary-navigation">
+      <ul class="menu">
+        <li>
+          <a href="#" class="nav-bar-icon">
+           {{> icons.icon-base icon="help" classes="" size="base" fill="primary"}}
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-bar-avatar" data-toggle="dropdown-user">
+            {{> components.avatar-initials }}
+          </a>
+          {{> components.dropdown type="user" items=dropdown.user id="dropdown-user"}}
+        </li>
+        <li>
+          <a class="nav-mobile-toggler">
+            {{> icons.icon-base icon="menu" classes="icon-open" size="medium" fill="primary"}}
+            {{> icons.icon-base icon="close" classes="icon-close" size="medium" fill="primary"}}
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </div>
+</nav>

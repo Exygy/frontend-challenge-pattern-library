@@ -1,0 +1,191 @@
+.ui-icon {
+  display: inline-block;
+  line-height: 1;
+  width: rem-calc(16);
+  height: rem-calc(16);
+  vertical-align: middle;
+  margin-top: -3px; // magic number offset
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  use {
+    fill: black;
+  }
+
+  &.i-tiny {
+    width: rem-calc(10);
+    height: rem-calc(10);
+  }
+
+  &.i-small {
+    width: rem-calc(12);
+    height: rem-calc(12);
+  }
+
+  &.i-base {
+    width: rem-calc(16);
+    height: rem-calc(16);
+  }
+
+  &.i-sm-medium {
+    width: rem-calc(20);
+    height: rem-calc(20);
+  }
+
+  &.i-medium {
+    width: rem-calc(24);
+    height: rem-calc(24);
+  }
+
+  &.i-large {
+    width: rem-calc(32);
+    height: rem-calc(32);
+  }
+
+  &.i-xlarge {
+    width: rem-calc(47);
+    height: rem-calc(47);
+  }
+
+  &.i-xxlarge {
+    width: rem-calc(85);
+    height: rem-calc(85);
+  }
+}
+
+.i-offset {
+  margin-top: -3px;
+}
+
+.i-primary {
+  use {
+    fill: $primary-color;
+  }
+}
+
+.i-bright-wrapper svg use {
+  fill: white;
+}
+
+.i-bright {
+  use {
+    fill: #fff;
+  }
+}
+
+.i-rgba {
+  use {
+    fill: rgba(#000, .3);
+  }
+}
+
+.i-favorite {
+  use {
+    fill: $warning-color !important;
+  }
+}
+
+.i-pdf {
+  use {
+    fill: $pdf-color;
+  }
+}
+
+.i-draft {
+  use {
+    fill: $secondary-color;
+  }
+}
+
+.draft .ui-icon {
+  use {
+    fill: $secondary-color;
+  }
+}
+.for-review .ui-icon {
+  use {
+    fill: $warning-color;
+  }
+}
+.reviewed .ui-icon {
+  use {
+    fill: $success-color;
+  }
+}
+.formatting-review .ui-icon {
+  use {
+    fill: $warning-color;
+  }
+}
+.for-approval .ui-icon {
+  use {
+    fill: $success-color;
+  }
+}
+.approved .ui-icon {
+  use {
+    fill: $primary-color;
+  }
+}
+.superceded .ui-icon {
+  use {
+    fill: $warning-color;
+  }
+}
+.withdrawn .ui-icon, .reject .ui-icon {
+  use {
+    fill: $alert-color;
+  }
+}
+.suspended .ui-icon {
+  use {
+    fill: $alert-color;
+  }
+}
+.expired .ui-icon {
+  use {
+    fill: $alert-color;
+  }
+}
+.release-pending .ui-icon {
+  use {
+    fill: $primary-color;
+  }
+}
+.effective .ui-icon {
+  use {
+    fill: $dark-green;
+  }
+}
+
+.i-word {
+  use {
+    fill: $word-color;
+  }
+}
+
+.i-active, .i-warn {
+  use {
+    fill: $warning-color !important;
+  }
+}
+
+.a-icon {
+  &.icon-right {
+    .ui-icon {
+      margin-left: .5rem;
+    }
+  }
+
+  &.icon-left {
+    .ui-icon {
+      margin-right: .5rem;
+    }
+  }
+}

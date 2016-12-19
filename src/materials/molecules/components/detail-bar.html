@@ -1,0 +1,19 @@
+<div class="full-header aside-header">
+  <div class="header-bar-aside">
+    <div class="header-bar">
+
+  <!--     <a class="header-bar-expand" href="#" data-toggle="{{default toggle 'doc-expand-toggle'}}">
+        {{> icons.icon-base icon="expand" size="medium" }}
+      </a> -->
+      <div class="header-bar-header">
+        <h4 class="header-bar-title" {{#if tabs-title }} data-page-tabs-title="{{ tabs-title }}" {{/if }}>
+          {{default name 'Commonwealth of Virginia'}}
+        </h4>
+      </div>
+      <a class="header-bar-close" data-sliding-panel-close href="#" {{#compare panel-close '!=' 'false' }}data-panel-close{{/compare }}>
+        {{> icons.icon-base icon="close-large" size="medium" }}
+      </a>
+
+    </div>
+  </div>
+</div> 

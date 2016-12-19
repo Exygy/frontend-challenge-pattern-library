@@ -1,0 +1,103 @@
+.slat {
+  border: solid 2px transparent;
+
+  &.active {
+    border: solid 2px $primary;
+  }
+
+  &.cabinet,
+  &.folder {
+    .slat-header {
+      @include scut-margin(n n rem-calc(11) n);
+    }
+  }
+}
+
+.slat-avatar {
+  cursor: pointer;
+
+  @include breakpoint(small only) {
+    @include flex-align-self(top);
+    @include scut-margin(rem-calc(16) n n rem-calc(8));
+  }
+
+  @include breakpoint(medium) {
+    @include index-item();
+    @include scut-margin(n n n rem-calc(16));
+    @include scut-padding(n n n rem-calc(1));
+  }
+}
+
+.slat-body {
+  @include index-item();
+  cursor: pointer;
+  font-size: rem-calc(12);
+  color: $black;
+  letter-spacing: rem-calc(.5);
+	padding-bottom: rem-calc(8) !important;
+	padding-top: rem-calc(8) !important;
+}
+
+.slat-header {
+  @include scut-margin(n n rem-calc(1) n);
+  color: $slat-header-color;
+  font-size: 0.875rem;
+  font-weight: $font-weight-semi;
+}
+
+.slat-title-wrapper {
+  @include scut-margin(n n 0.75rem n);
+}
+
+.slat-attr-wrapper {
+  margin-bottom: 0;
+}
+
+.slat-subtitle-prefix,
+.slat-attr-key {
+  font-weight: $font-weight-bold;
+}
+
+.slat-secondary {
+  @include breakpoint(small only) {
+    @include flex-align-self(top);
+    @include scut-margin(rem-calc(16) rem-calc(6) n n);
+  }
+
+  @include breakpoint(medium) {
+    @include scut-margin(n rem-calc(10) n n);
+  }
+
+  color: $slat-detail-color;
+  font-size: rem-calc(12);
+  text-align: right;
+  text-transform: uppercase;
+
+  .ui-icon {
+    @include breakpoint(small only) {
+      @include scut-size(rem-calc(23));
+    }
+  }
+}
+
+.slat-secondary-icon {
+  @include breakpoint(small only) {
+    display: none;
+  }
+  @include scut-margin(n rem-calc(8) n n);
+}
+
+.slat-canvas {
+  @include scut-padding(rem-calc(10));
+  background-color: $light-gray;
+  border-radius: $slat-radius;
+}
+
+.slat-dropdown {
+  cursor: pointer;
+  position: relative;
+
+  .dropdown-pane {
+    top: 30px !important;
+  }
+}

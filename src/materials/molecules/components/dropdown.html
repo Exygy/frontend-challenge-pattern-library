@@ -1,0 +1,13 @@
+<div  class="dropdown-pane bottom panel {{{classes}}}"
+      id="{{{default id 'dropdown'}}}"
+      data-dropdown
+      {{#if hover }}
+        data-hover="true" data-hover-pane="true"
+      {{/if}}
+      data-close-on-click="true"
+      {{ options }}>
+
+  <ul class="menu vertical align-left">
+    {{> components.dropdown-items-panel items=items}}
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+@mixin slat-container() {
+  @include scut-margin(n n rem-calc(10) n);
+  background-color: $slat-bg-color;
+  border-radius: $slat-radius;
+  box-shadow: 0 rem-calc(1) rem-calc(4) 0 rgba(0, 0, 0, 0.2);
+  max-width: none !important;
+  min-height: rem-calc(70);
+  position: relative;
+
+  &:last-child {
+    @include scut-margin(n n 0 n);
+  }
+}
+
+.slat {
+  @include slat-container;
+}

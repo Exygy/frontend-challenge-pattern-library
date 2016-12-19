@@ -1,0 +1,42 @@
+{
+  "name": "frontend-engineering-challenge",
+  "version": "0.0.0",
+  "main": "README.md",
+  "authors": [
+    "Exygy"
+  ],
+  "description": "Pattern library for Exygy's front-end engineering challenge",
+  "keywords": [
+    "express",
+    "emc",
+    "exygy",
+    "pattern library",
+    "prototype"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "foundation-sites": "^6.3.0",
+    "Scut": "scut#^1.4.0"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "bower": "bower",
+    "prestart": "npm install",
+    "build": "npm install && gulp",
+    "start": "gulp --dev",
+    "postinstall": "bower install",
+    "test": "npm run build"
+  },
+  "resolutions": {
+    "jquery": "~2.2.0"
+  }
+}

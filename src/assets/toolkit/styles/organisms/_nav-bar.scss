@@ -1,0 +1,290 @@
+$nav-bar-height: rem-calc(56);
+
+
+body {
+  padding-top: $nav-bar-height;
+}
+
+
+.nav-bar {
+  color: $white;
+
+  &.is-fixed {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+
+  .nav-trigger {
+    @extend .pr-vert-align;
+    line-height: rem-calc(40);
+  }
+
+  .nav-block {
+    height: rem-calc(56);
+    position: relative;
+  }
+}
+
+.nav-logo {
+  @include scut-margin(0 rem-calc(20) 0 1rem);
+  font-size: rem-calc(14);
+  font-weight: $font-weight-bold;
+  letter-spacing: rem-calc(1.3);
+  line-height: $nav-bar-height;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint(large) {
+    text-align: left;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@mixin desktop-menu-style() {
+
+  font-size: rem-calc(14);
+  font-weight: $font-weight-bold;
+  letter-spacing: rem-calc(1.3);
+  text-transform: uppercase;
+
+  ul {
+    background: none;
+    padding: 0;
+
+    li {
+      padding: 0 rem-calc(2);
+
+      &.active {
+        a {
+          background-color: $menu-item-background-active;
+        }
+      }
+
+      a {
+        color: $white;
+        line-height: $nav-bar-height;
+        padding: 0 rem-calc(8);
+
+        svg use {
+          fill: $white;
+        }
+
+        &:hover {
+          background-color: $menu-item-background-hover;
+        }
+      }
+    }
+  }
+
+}
+
+.secondary-navigation {
+  @include desktop-menu-style();
+}
+
+.main-navigation {
+  @include breakpoint(large) {
+    @include desktop-menu-style();
+    opacity: 0.7;
+  }
+
+  @include breakpoint(medium down) {
+    @include layout-transition();
+    position: fixed;
+    overflow: hidden;
+    height: calc( 100vh - #{$nav-bar-height} );
+    left: 0;
+    right: 0;
+    top: $nav-bar-height;
+    display: block;
+    background: $primary;
+    max-height: 0px;
+
+    .menu {
+      @include menu-direction(vertical);
+    }
+
+    li {
+      a {
+        @include scut-padding(rem-calc(20) n);
+        opacity: 0.6;
+        color: $white;
+        transition: 0.2s;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-transform: uppercase;
+      }
+      &.active, &:hover {
+        a {
+          opacity: 1;
+          background: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+.top-bar .top-bar-right { flex: none; }
+
+.top-bar {
+  z-index: 1000 !important;
+  @include breakpoint(medium down) {
+    .top-bar-left {
+      @include flex-grid-column(shrink);
+      @include flex-align($x: left);
+    }
+    .top-bar-right{
+      @include flex-grid-column(shrink);
+      @include flex-align($x: right);
+    }
+  }
+}
+
+
+.top-nav-back.ui-icon {
+  svg use {
+    fill: $white !important;
+  }
+}
+
+.nav-search {
+  @include breakpoint(medium down) {
+    @include layout-transition();
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    bottom: 0px;
+    right: 60px;
+    background: $primary;
+    overflow: hidden;
+    padding: 0px !important;
+
+    input {
+      margin-top: 9px;
+      height: rem-calc(36) !important;
+      width: 100%;
+      max-width: 100%;
+    }
+    .ui-icon {
+      top: rem-calc(12) !important;
+    }
+  }
+}
+
+.nav-mobile-toggler {
+  position: relative;
+  right: -10px;
+
+  svg use {
+    fill: $white !important;
+  }
+
+  .icon-open {
+    display: block;
+  }
+  .icon-close {
+    display: none;
+  }
+
+  &:hover{
+    background: none !important;
+  }
+
+  @include breakpoint(large) {
+    display: none !important;
+  }
+}
+
+
+.nav-mobile-open {
+  .main-navigation {
+    max-height: 100vh;
+  }
+  .nav-mobile-toggler {
+    .icon-open {
+      display: none;
+    }
+    .icon-close {
+      display: block;
+    }
+  }
+  .nav-search {
+    left: 10px;
+  }
+}
+
+.nav-bar-search {
+  .icon-input {
+    @include scut-padding(rem-calc(5) n rem-calc(5) rem-calc(30));
+    height: rem-calc(30);
+    margin-right: rem-calc(19);
+  }
+
+  .ui-icon {
+    @include scut-size(rem-calc(14));
+    left: rem-calc(10);
+    top: rem-calc(11);
+
+    svg use {
+      fill: $primary;
+    }
+  }
+}
+
+@mixin nav-bar-icon($background: $white, $display: block) {
+  @include scut-size(rem-calc(30));
+  background-color: $background;
+  border-radius: 50%;
+  display: $display;
+  position: relative;
+  margin-right: rem-calc(19);
+}
+
+.nav-bar-icon {
+  @include nav-bar-icon();
+
+  &:hover {
+    background-color: $white !important;
+  }
+
+  .ui-icon {
+    @include scut-center-transform;
+    @include scut-size(rem-calc(19));
+  }
+
+  @include breakpoint(medium down) {
+    display: none !important;
+  }
+}
+
+.nav-bar-avatar {
+  @include nav-bar-icon();
+  font-weight: $font-weight-normal;
+
+  @include breakpoint(medium down) {
+    display: none !important;
+  }
+}
+
+.secondary-navigation, .main-navigation {
+  ul li a.nav-bar-avatar {
+    @include scut-padding(n 0);
+  }
+}
+
+.nav-bar-logo {
+  @include nav-bar-icon($background: transparent, $display: inline);
+  @include scut-margin(n rem-calc(16) n rem-calc(4));
+
+  .ui-icon {
+    @include scut-size(rem-calc(30));
+  }
+}

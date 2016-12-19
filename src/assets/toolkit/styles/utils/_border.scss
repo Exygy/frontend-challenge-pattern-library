@@ -1,0 +1,17 @@
+.border {
+  &-bottom {
+    border-bottom: 2px solid $light-gray;
+  }
+
+  &-top {
+    border-top: 2px solid $light-gray;
+  }
+
+  &-left {
+    border-left: 2px solid $light-gray;
+  }
+
+  &-right {
+    border-right: 2px solid $light-gray;
+  }
+}

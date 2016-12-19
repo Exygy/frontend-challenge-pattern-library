@@ -1,0 +1,8 @@
+.doc-viewer {
+  @include canvas();
+}
+
+.doc-viewer-section {
+  @include scut-padding(n n rem-calc(10) n);
+  @include flex-nest-medium();
+}

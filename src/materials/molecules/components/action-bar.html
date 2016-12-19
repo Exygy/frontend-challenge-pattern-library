@@ -1,0 +1,29 @@
+<header class="action-full-header full-header border-bottom {{default classes ''}}">
+  <div class="header-bar action-bar">
+    <div class="action-bar-header  align-self-middle">
+      <!-- <div class="action-bar-back hide-for-large">
+        <a href="#" class="back-link" data-back-link>Tasks</a>
+      </div> -->
+      <h3 class="action-bar-title">
+        {{default title 'Approve and Sign'}}
+        <small class="action-bar-subtitle">{{subtitle}}</small>
+      </h3>
+    </div>
+
+    <div class="action-bar-content">
+      {{> buttons.button classes="hollow small success" text="Approve" reveal="task-reveal-approve"}}
+      {{> buttons.button classes="hollow small alert" text="Reject" reveal="task-reveal-reject"}}
+
+      <div class="action-bar-more">
+        <a class="button hollow secondary round-icon no-margin" href="#" data-toggle="tasks-dropdown">
+          {{> icons.icon-base icon="more-vert" size="base"}}
+        </a>
+
+        {{> components.dropdown type="panel" items=dropdown.tasks id="tasks-dropdown" options='data-close-on-click="true"' }}
+
+      </div>
+
+    </div>
+
+  </div>
+</header>

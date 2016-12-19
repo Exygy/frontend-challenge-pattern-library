@@ -1,0 +1,8 @@
+<form class="task-reveal-form">
+  <input class="task-reveal-username task-reveal-signature-field" type="text" placeholder="Username" required/>
+  <input class="task-reveal-password task-reveal-signature-field" type="password" placeholder="Password" required/>
+  <textarea rows="3" placeholder="Add a Comment (optional)"></textarea>
+
+  {{> buttons.button text=(default action 'approve') type="submit" classes=(concat 'task-reveal-action ' (default action 'approve'))}}
+  <a href="#" class="task-reveal-cancel" data-close aria-label="Close modal">Cancel</a>
+</form>

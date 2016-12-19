@@ -1,0 +1,41 @@
+<div class="reveal task-reveal {{default classes ''}}" id="task-reveal-{{default action 'approve'}}"
+     data-action="{{default action 'approve'}}" data-reveal>
+  <span class="task-reveal-symbol">
+    {{#compare (default action 'approve') '==' 'approve'}}
+      {{> icons.icon-base icon="checkmark-large" fill="darkest-blue" size="sm-medium"}}
+    {{/compare}}
+    {{#compare (default action 'approve') '==' 'reject'}}
+      {{> icons.icon-base icon="close-large" fill="darkest-blue" size="sm-medium"}}
+    {{/compare}}
+    {{#compare (default action 'approve') '==' 'delegate'}}
+      {{> icons.icon-base icon="delegate" fill="darkest-blue" size="sm-medium"}}
+    {{/compare}}
+  </span>
+
+  <div class="task-reveal-body">
+    <div class="task-reveal-header">
+      <h2 class="task-reveal-title">
+        {{capitalize (default action 'approve')}}
+        {{#compare (default action 'approve') 'delegate'}}
+          Task
+        {{/compare}}
+      </h2>
+      <h3 class="task-reveal-subtitle">(3 Documents)</h3>
+			<ul class="task-reveal-doc-list">
+				<li>Clinical Summary - 253492</li>
+				<li>Integrated Safety Summary</li>
+				<li>Periodic Safety Update</li>
+			</ul>
+      <h4 class="task-reveal-sender">
+        Sent by <span class="task-reveal-assignee">Wayne Hubbard</span>
+        on <span class="task-reveal-date">26 - Aug</span>
+      </h4>
+    </div>
+
+    {{> forms.task-form action=(default action 'approve')}}
+  </div>
+
+  <button class="reveal-close task-reveal-close" data-close aria-label="Close modal" type="button">
+    {{> icons.icon-base icon="close-large" fill="white" size="small"}}
+  </button>
+</div>

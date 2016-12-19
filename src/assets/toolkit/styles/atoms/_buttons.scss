@@ -1,0 +1,116 @@
+@mixin round-icon($background: $white, $display: block) {
+  @include scut-size(rem-calc(30));
+  background-color: $background;
+  border-radius: 50%;
+  display: $display;
+  padding: 0;
+  position: relative;
+
+  .ui-icon {
+    @include scut-center-transform;
+
+    svg use {
+      fill: $white;
+    }
+  }
+}
+
+// Core buttons
+button,
+.button {
+  display: inline-block;
+  font-weight: 600;
+  width: auto;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+
+  &.button-circle {
+    @include round-icon();
+  }
+
+  &.button-link {
+    background: none;
+    color: $darker-gray;
+    line-height: 1rem;
+    padding: 0;
+    vertical-align: middle;
+
+    &:hover, &:focus {
+      background: none;
+      outline: none;
+    }
+
+    .ui-icon {
+      vertical-align: baseline;
+    }
+  }
+
+  &.button-icon-left {
+    .ui-icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &.button-icon-right {
+    .ui-icon {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &.hollow {
+    border-width: 2px !important;
+  }
+
+  &.success {
+    svg use {
+      fill: $success;
+    }
+  }
+
+  svg use {
+    fill: $darker-gray;
+  }
+
+  $button-colors: (
+    primary: #2c95dd,
+    secondary: #b0b0b0,
+    secondary-light: #efefef,
+    success: #2e8540,
+    warning: #ffba54,
+    alert: #E24434,
+  );
+
+  &.secondary-light {
+    svg use {
+      fill: $darker-gray !important;
+    }
+  }
+
+  @each $color-name, $color-value in $button-colors {
+    &.#{"" + $color-name} {
+      svg use {
+        fill: $white;
+      }
+    }
+  }
+
+  @each $color-name, $color-value in $button-colors {
+    &.hollow.#{"" + $color-name} {
+      svg use {
+        fill: $color-value;
+      }
+
+      &:hover {
+        svg use {
+          fill: scale-color($color-value, $lightness: -50%);
+        }
+      }
+
+      &:focus {
+        svg use {
+          fill: scale-color($color-value, $lightness: -50%);
+        }
+      }
+    }
+  }
+}

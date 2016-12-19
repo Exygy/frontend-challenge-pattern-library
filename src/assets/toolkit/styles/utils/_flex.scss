@@ -1,0 +1,30 @@
+@mixin flex-nest-medium() {
+  .flex-row .flex-column {
+    @include breakpoint(large) {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@mixin flex-shrink() {
+  flex: flex-grid-column(shrink);
+  max-width: 100%;
+}
+
+@mixin flex-column-collapse() {
+  @include scut-padding(0);
+
+  @include breakpoint(medium) {
+    @include scut-padding(0);
+  }
+}
+
+.flex-row-nested {
+  @include flex-grid-row($behavior: nest);
+}

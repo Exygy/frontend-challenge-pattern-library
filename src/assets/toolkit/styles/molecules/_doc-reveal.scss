@@ -1,0 +1,101 @@
+.doc-reveal {
+  @include scut-padding(0);
+  border-radius: 4px;
+
+	&:focus {
+		outline: none;
+	}
+
+  .doc-stage {
+    border-bottom: 1px solid $lighter-gray;
+  }
+}
+
+.doc-reveal-header {
+  @include flex-align(null, middle);
+  @include flex-grid-row();
+  border-bottom: 1px solid $lighter-gray;
+  color: $black;
+  max-width: none;
+}
+
+.doc-reveal-header-type {
+  @include flex-grid-column(shrink);
+  @include scut-padding(rem-calc(10) rem-calc(7));
+
+  @include breakpoint(medium) {
+    @include scut-padding(rem-calc(10) rem-calc(7));
+  }
+}
+
+.doc-reveal-header-body {
+  @include flex-grid-column();
+  font-size: 0.75rem;
+  overflow: hidden;
+
+  @include breakpoint(small) {
+    @include scut-padding(rem-calc(10) 0);
+  }
+
+  @include breakpoint(medium) {
+    @include scut-padding(rem-calc(10) 0);
+  }
+}
+
+.doc-reveal-header-more {
+  @include flex-grid-column(shrink);
+
+  @include breakpoint(small only) {
+    @include scut-margin(n rem-calc(33) n n);
+  }
+
+  .button {
+    float: right;
+  }
+}
+
+.doc-reveal-doc-stage {
+  position: relative;
+}
+
+.doc-reveal-panel {
+  display: none;
+  background-color: $white;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+}
+
+.doc-reveal-panel-header {
+  @include scut-padding(1rem);
+  border-bottom: 1px solid $lighter-gray;
+  color: $darkest-gray;
+  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.doc-reveal-panel-close {
+  @include scut-margin(rem-calc(5) n n n);
+  color: $medium-gray;
+  float: right;
+  font-size: 0.75rem;
+  font-weight: $font-weight-semi;
+
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+.doc-reveal-pagination {
+  @include scut-padding(0.5rem n);
+  text-align: center;
+}
+
+.doc-reveal-close {
+  right: rem-calc(-23);
+  top: rem-calc(-19);
+}

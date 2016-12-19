@@ -1,0 +1,153 @@
+-
+  type: excel
+  title: List and description of investigators and sites - 234567 - 00000003548
+  subtitle: 16.1.4 List of Investigators
+  pages: 2
+  attr1:
+      key: Modified By
+      value: Sophia Bishop
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany
+-
+  type: word
+  title: Clinical Summary - 25399
+  subtitle: Clinical Summary of Efficacy and Safety for Ibuprofen
+  pages: 3
+  attr1:
+      key: Modified By
+      value: Lura Brown
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: United States
+-
+  type: pdf
+  title: Approval Letter
+  subtitle: NDA 94623
+  pages: 5
+  attr1:
+      key: Modified By
+      value: Steven Aguilar
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany
+-
+  type: word
+  title: Approval Letter
+  subtitle: NDA 94623
+  pages: 1
+  attr1:
+      key: Modified By
+      value: Jimmy Townsend
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany, United States
+-
+  type: excel
+  title: Approval Letter
+  subtitle: NDA 94623
+  pages: 6
+  attr1:
+      key: Modified By
+      value: Sophia Bishop
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany
+-
+  type: excel
+  title: List and description of investigators and sites - 234567 - 00000003548
+  subtitle: 16.1.4 List of Investigators
+  pages: 4
+  attr1:
+      key: Modified By
+      value: Lura Brown
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: United States
+-
+  type: word
+  title: Clinical Summary - 25399
+  subtitle: Clinical Summary of Efficacy and Safety for Ibuprofen
+  pages: 3
+  attr1:
+      key: Modified By
+      value: Steven Aguilar
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany
+-
+  type: excel
+  title: List and description of investigators and sites - 234567 - 00000003548
+  subtitle: 16.1.4 List of Investigators
+  pages: 7
+  attr1:
+      key: Modified By
+      value: Jimmy Townsend
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany, United States
+-
+  type: word
+  title: Clinical Summary - 25399
+  subtitle: Clinical Summary of Efficacy and Safety for Ibuprofen
+  pages: 5
+  attr1:
+      key: Modified By
+      value: Sophia Bishop
+  attr2:
+      key: Last Modified
+      value: 08/08/2016
+  attr3:
+      key: Status
+      value: Final
+  attr4:
+      key: Country
+      value: Germany

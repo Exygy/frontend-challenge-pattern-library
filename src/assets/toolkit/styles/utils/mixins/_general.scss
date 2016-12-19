@@ -1,0 +1,108 @@
+@mixin sr-only() {
+  position: absolute;
+  left: -999em;
+}
+
+@mixin bottom-line() {
+  &:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 1.75rem;
+    right: 1.75rem;
+    height: 1px;
+    background-color: $light-gray;
+  }
+}
+
+@mixin canvas() {
+  @include scut-margin(n n rem-calc(40) n);
+  @include scut-padding(rem-calc(10));
+  background-color: $lightest-gray;
+  border: 1px solid $lighter-gray;
+  border-radius: $slat-radius;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin index-item() {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  vertical-align: middle;
+
+  @include breakpoint(medium) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &:last-of-type {
+    padding-right: 1rem;
+  }
+}
+
+@mixin has-status($status-color: $success) {
+  border-left: 4px solid $status-color;
+}
+
+$layout-transition-speed: 0.6s;
+@mixin layout-transition ( $properties: (all), $time: $layout-transition-speed ) {
+  $props: '';
+  $i: 0;
+  @each $prop in $properties {
+    $props: $props + $prop + " " + $time;
+    $i: $i+1;
+    @if $i < length($properties) {
+      $props: $props + ", ";
+    }
+  }
+  transition: unquote( $props ) !important;
+}
+
+@mixin bordered-arrow( $side: 'top', $size: 10px, $position: 0.5, $border-color: $lighter-gray, $arrow-color: $white ){
+
+  $slide_side: 'left';
+  $offset_side: 'top';
+  $border_side: 'bottom';
+
+  @if $side == 'bottom' {
+    $slide_side: 'left';
+    $offset_side: 'bottom';
+    $border_side: 'top';
+  }
+  @if $side == 'left' {
+    $slide_side: 'top';
+    $offset_side: 'left';
+    $border_side: 'right';
+  }
+  @if $side == 'right' {
+    $slide_side: 'top';
+    $offset_side: 'right';
+    $border_side: 'left';
+  }
+
+  &:before,
+  &:after {
+    content:"";
+    position: absolute;
+    border: $size solid transparent;
+    z-index: 10;
+
+    $c1: ($position*100%);
+    $c2: ($position*($size*2));
+
+    #{$slide_side}: calc( #{$c1} - #{$c2} );
+    //margin-#{$slide_side}: -$size;
+    #{$offset_side}: -($size*2);
+    border-#{$border_side}-color: $arrow-color;
+  }
+  &:after {
+      z-index: 8;
+      #{$offset_side}: -($size*2+1);
+      border-#{$border_side}-color: $border-color;
+  }
+}

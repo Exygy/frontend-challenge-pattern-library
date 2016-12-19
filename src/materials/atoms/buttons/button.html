@@ -1,0 +1,13 @@
+---
+notes: |
+
+  Use the `<a> `tag if the button is a link to another page, or a link to an anchor within a page. Generally anchors don't require JavaScript to work.
+
+  Use the `<button>` tag if the button performs an action that changes something on the current page. `<button>` elements almost always require JavaScript to function.
+
+---
+
+<button class="button {{ default classes '' }}" data-open="{{default reveal ''}}" type="{{default type 'button'}}"
+        {{#if (default disabled false)}}disabled{{/if}}>
+  {{ default text "Submit" }}
+</button>

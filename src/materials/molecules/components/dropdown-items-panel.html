@@ -1,0 +1,21 @@
+{{#each items}}
+  {{#compare this 'separator' }}
+    <li class="separator"></li>
+  {{else }}
+    <li class="{{ this.classes }}">
+      <a href="{{ this.link }}" class="{{#if this.icon }}with-icon{{/if }}"
+         {{#if this.tabs }}data-page-tab="{{ this.tabs }}"{{/if}}
+         {{#if this.panel }}data-panel-trigger="{{ this.panel }}"{{/if}}
+         {{#if this.reveal }}data-open="{{ this.reveal }}"{{/if}}>
+
+        {{ this.name }}
+
+        {{#if this.icon }}
+          <div class="dropdown-icon">
+            {{> icons.icon-base icon=this.icon size="base"}}
+          </div>
+        {{/if }}
+      </a>
+    </li>
+  {{/compare }}
+{{/each}}

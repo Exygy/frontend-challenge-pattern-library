@@ -1,0 +1,95 @@
+// Font sizes
+//
+
+// Create placeholders for each responsive header size in headers
+@each $size, $headers in $header-sizes {
+  @include breakpoint($size) {
+    @each $header, $font-size in $headers {
+      %#{$header} {
+        font-size: rem-calc($font-size);
+      }
+    }
+  }
+}
+
+$t-alpha: rem-calc(map-get(map-get($header-sizes, medium), h1));
+$t-beta: rem-calc(map-get(map-get($header-sizes, medium), h2));
+$t-gamma: rem-calc(map-get(map-get($header-sizes, medium), h3));
+$t-delta: rem-calc(map-get(map-get($header-sizes, medium), h4));
+$t-epsilon: rem-calc(map-get(map-get($header-sizes, medium), h5));
+$t-base: rem-calc(map-get(map-get($header-sizes, medium), h6));
+
+.h1, .t-alpha {
+  @extend %h1;
+}
+
+.h2, .t-beta {
+  @extend %h2;
+}
+
+.h3, .t-gamma {
+  @extend %h3;
+}
+
+.h4, .t-delta {
+  @extend %h4;
+}
+
+.h5, .t-epsilon {
+  @extend %h5;
+}
+
+.h6, .t-base {
+  @extend %h6;
+}
+
+
+// Font families
+//
+
+.t-sans {
+  font-family:$body-font-family !important;
+}
+
+// Font weights
+//
+.t-black {
+   font-weight: $font-weight-black;
+}
+
+.t-bold {
+   font-weight: $font-weight-bold;
+}
+
+.t-semi {
+   font-weight: $font-weight-semi;
+}
+
+.t-normal {
+  font-weight: $font-weight-normal;
+}
+
+// Font transforms
+//
+.t-caps {
+  text-transform: uppercase !important;
+}
+
+.t-titled {
+  text-transform: capitalize !important;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+hr {
+  border-bottom-color: $light-gray !important;
+}
+
+.icon-text {
+  .ui-icon {
+    margin-right: .25rem;
+  }
+}
