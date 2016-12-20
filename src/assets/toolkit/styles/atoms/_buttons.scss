@@ -19,6 +19,7 @@
 button,
 .button {
   display: inline-block;
+  font-family: $body-font-family;
   font-weight: 600;
   width: auto;
   text-transform: uppercase;

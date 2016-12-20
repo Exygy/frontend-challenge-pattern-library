@@ -1,0 +1,121 @@
+.login-box {
+  @include breakpoint(medium) {
+    max-width: 360px;
+  }
+  @include scut-margin(rem-calc(66) auto n auto);
+  border: solid 1px $lighter-gray;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  position: relative;
+  text-align: center;
+}
+
+.login-box-symbol {
+  @include scut-center-transform(x);
+  @include scut-padding(rem-calc(11) rem-calc(13));
+  background-color: $white;
+  border: 2px solid $darkest-blue;
+  border-radius: 50%;
+  top: 19px;
+  z-index: 10;
+}
+
+.login-box-body {
+  background-color: $light-blue-gray;
+  border-bottom-left-radius: rem-calc(6);
+  border-bottom-right-radius: rem-calc(6);
+  box-shadow: 0 0 3px 0 rgba(142, 142, 142, 0.5);
+  text-align: center;
+}
+
+.login-box-header {
+  @include scut-margin(rem-calc(49) n n n);
+  @include scut-padding(rem-calc(29) n n n);
+}
+
+.login-box-title {
+  color: $darkest-blue;
+  font-size: 1rem;
+  font-weight: $font-weight-semi;
+}
+
+.login-box-subtitle,
+.login-box-doc-list {
+  @include ellipsis();
+  @include scut-padding(n 1rem);
+  color: $medium-gray;
+  font-size: 0.75rem;
+  font-weight: $font-weight-semi;
+  line-height: 1.83;
+  z-index: 20;
+}
+
+.login-box-subtitle {
+	cursor: pointer;
+  display: block;
+}
+
+.login-box-doc-list {
+	@include scut-margin(0);
+	display: none;
+	list-style: none;
+}
+
+.login-box-sender {
+  @include scut-padding(0 rem-calc(11));
+  background-color: $light-blue-gray;
+  color: $darkest-gray;
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: $font-weight-semi;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-transform: uppercase;
+  top: 9.5px;
+  z-index: 20;
+}
+
+.login-box-form {
+  @include scut-padding(rem-calc(22) rem-calc(20));
+
+  textarea {
+    resize: none;
+  }
+}
+
+input.login-box-form-username {
+  @include scut-margin(n n 0 n);
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 3rem;
+}
+
+input.login-box-form-password {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 3rem;
+}
+
+.login-box-form-submit {
+  @include scut-margin(rem-calc(14) n rem-calc(17) n);
+  @include scut-padding(rem-calc(14) rem-calc(70));
+  background-color: $darkest-blue;
+  border-radius: 62.5rem;
+  color: $white;
+  font-size: 0.75rem;
+  font-weight: $font-weight-semi;
+  text-transform: none;
+
+  &:hover {
+    background-color: $darkest-blue;
+  }
+
+  &[disabled],
+  &[disabled]:hover {
+    background-color: $darkest-blue;
+    color: rgba($white, 0.55);
+    opacity: 0.66;
+  }
+}

@@ -1,0 +1,21 @@
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+select,
+textarea {
+  @include scut-margin(n n rem-calc(6) n);
+  @include scut-padding(rem-calc(16) rem-calc(14));
+  border: solid 1px $light-gray;
+  border-radius: rem-calc(6);
+}

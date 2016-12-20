@@ -1,25 +1,12 @@
-.browse-header {
-  @include scut-padding(rem-calc(21) n);
-
-  .hide-browse-link {
-    float: right;
-
-    .ui-icon {
-      @include scut-margin(rem-calc(-9) n n n);
-      @include scut-size(rem-calc(14));
-    }
-  }
-}
-
-.browse-header-title {
-  font-size: 0.75rem;
-  font-weight: $font-weight-bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.browse-search {
+  @include flex-grid-row();
+  @include scut-margin(1rem n n n);
 }
 
 .browse-stage {
   @include canvas;
+  @include flex-grid-row();
+  @include scut-margin(rem-calc(10) n n n);
 
   .layout-header,
   .full-header {
@@ -52,6 +39,6 @@
   }
 }
 
-.browse-slat-template {
-  display: none;
+.browse-slat-set {
+  @include flex-grid-column(12);
 }

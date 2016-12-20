@@ -2,7 +2,7 @@
 
 Front End Pattern Library for Engineering Challenge.
 
-##Front end toolkit for EMC Patterns
+##Front end patterns toolkit
 
 Includes:
 
