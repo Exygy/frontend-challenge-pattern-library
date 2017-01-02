@@ -1,1 +1,5 @@
-<input type="text" id="textInput" class="search-box {{default classes ''}}" placeholder="{{default placeholder ''}}"/>
+<div class="search-box-container">
+  {{> icons.icon-base icon="search" fill="darker-gray" classes="search-box-search-icon"}}
+  <input type="text" id="textInput" class="search-box {{default classes ''}}" placeholder="{{default placeholder ''}}"/>
+  {{> icons.icon-base icon="close-large" fill="medium-gray" classes="search-box-close-icon"}}
+</div>

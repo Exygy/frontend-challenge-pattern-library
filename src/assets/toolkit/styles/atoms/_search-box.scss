@@ -1,3 +1,24 @@
+.search-box-container {
+  position: relative;
+  width: 100%;
+
+  .ui-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.search-box-search-icon {
+      left: 1rem;
+    }
+
+    &.search-box-close-icon {
+      right: 1rem;
+    }
+  }
+}
+
 .search-box {
   display: block;
+  font-size: 1rem;
+  font-weight: $font-weight-semi;
 }

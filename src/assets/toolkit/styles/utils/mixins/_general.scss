@@ -15,15 +15,6 @@
   }
 }
 
-@mixin canvas() {
-  @include scut-margin(n n rem-calc(40) n);
-  @include scut-padding(rem-calc(10));
-  background-color: $lightest-gray;
-  border: 1px solid $lighter-gray;
-  border-radius: $slat-radius;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-}
-
 @mixin ellipsis() {
   white-space: nowrap;
   overflow: hidden;

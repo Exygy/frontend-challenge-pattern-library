@@ -39,3 +39,30 @@
 .avatar-initials-text {
   @include scut-center-transform();
 }
+
+.item-avatar {
+  position: relative;
+
+  &.is-circle {
+    background-color: $darker-blue;
+    border-radius: 50%;
+    text-align: center;
+
+    .ui-icon {
+      vertical-align: baseline;
+      line-height: 1;
+
+      svg {
+        vertical-align: top;
+      }
+    }
+  }
+
+  &.has-count {
+    .count {
+      @include absolute(0, 2px, 0, 0);
+      text-align: center;
+      font-style: normal;
+    }
+  }
+}

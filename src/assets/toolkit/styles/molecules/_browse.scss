@@ -4,41 +4,18 @@
 }
 
 .browse-stage {
-  @include canvas;
   @include flex-grid-row();
-  @include scut-margin(rem-calc(10) n n n);
-
-  .layout-header,
-  .full-header {
-    background-color: transparent;
-
-    .header-bar {
-      @include scut-padding(rem-calc(4) n rem-calc(13) n);
-    }
-  }
-
-  .header-bar-header {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .pagination {
-    display: none;
-    z-index: 20;
-
-    &.top {
-      @include scut-margin(rem-calc(8) n n n);
-      position: absolute;
-      right: 1rem;
-    }
-
-    &.bottom {
-      @include scut-margin(rem-calc(14) n n n);
-      text-align: right;
-    }
-  }
+  @include scut-margin(rem-calc(10) n rem-calc(40) n);
+  @include scut-padding(rem-calc(10) n);
+  background-color: $lightest-gray;
+  border: 1px solid $lighter-gray;
+  border-radius: $slat-radius;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
 .browse-slat-set {
-  @include flex-grid-column(12);
+  @include flex-grid-column();
+  @include breakpoint(medium) {
+    @include scut-padding(n 0.75rem);
+  }
 }

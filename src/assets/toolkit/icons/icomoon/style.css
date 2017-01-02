@@ -9,52 +9,52 @@
 
 /* ==========================================
 Single-colored icons can be modified like so:
-.i-name {
+.icon-name {
   font-size: 32px;
   color: red;
 }
 ========================================== */
 
-.i-tasks-icon {
-  width: 1.09375em;
-}
-
-.i-file-excel {
+.icon-file-excel {
   width: 0.78125em;
 }
 
-.i-file-pdf {
+.icon-file-pdf {
   width: 0.78125em;
 }
 
-.i-file-word {
+.icon-file-word {
   width: 0.78125em;
 }
 
-.i-help {
+.icon-help {
   width: 0.59375em;
 }
 
-.i-more-vert {
+.icon-more-vert {
   width: 0.21875em;
 }
 
-.i-page-double-left {
+.icon-page-double-left {
   width: 0.46875em;
 }
 
-.i-page-double-right {
+.icon-page-double-right {
   width: 0.46875em;
 }
 
-.i-page-left {
+.icon-page-left {
   width: 0.3125em;
 }
 
-.i-page-right {
+.icon-page-right {
   width: 0.3125em;
 }
 
-.i-saved {
+.icon-saved {
   width: 0.4375em;
+}
+
+.icon-tasks-icon {
+  width: 1.09375em;
 }

@@ -4,15 +4,15 @@
   </div>
 
   <div class="slat-body expand columns">
-    <div class="flex-row collapse"> <!-- slat-header -->
-      <div class="flex-column flex-small-12">
+    <div class="rows"> <!-- slat-header -->
+      <div class="columns small-12">
         <h3 class="slat-header">{{{default title 'List and description of investigators and sites - 234567 - 00000003548'}}}</h3>
       </div>
     </div>
 
     {{#if (default subtitle '16.1.4 List of Investigators')}}
-      <div class="flex-row collapse slat-subtitle"> <!-- slat-title -->
-        <div class="flex-column flex-small-12">
+      <div class="row slat-subtitle"> <!-- slat-title -->
+        <div class="columns small-12">
           <p class="slat-title-wrapper">
             <span class="slat-subtitle-prefix">Title:</span>
             <span class="slat-subtitle-text">{{{default subtitle '16.1.4 List of Investigators'}}}</span>
@@ -21,8 +21,8 @@
       </div>
     {{/if}}
 
-    <div class="flex-row collapse show-for-medium">
-      <div class="flex-column flex-small-12 flex-medium-6">
+    <div class="row show-for-medium">
+      <div class="columns small-12 medium-6">
         <p class="slat-attr-wrapper">
           <span class="slat-attr-key">{{{attr1.key}}}:</span>
           <span class="slat-attr-value">{{{attr1.value}}}</span>
@@ -33,7 +33,7 @@
         </p>
       </div>
 
-      <div class="flex-column flex-small-12 flex-medium-6">
+      <div class="columns small-12 medium-6">
         <p class="slat-attr-wrapper">
           <span class="slat-attr-key">{{{attr3.key}}}:</span>
           <span class="slat-attr-value">{{{attr3.value}}}</span>
@@ -49,9 +49,9 @@
   <div class="slat-secondary columns shrink">
     {{> icons.icon-base icon=(default icon-secondary 'star') fill="darker-gray" size="sm-medium" classes="slat-secondary-icon"}}
 
-    <span {{#if id }}data-toggle="virtual-document-slat-{{ id }}-dropdown"{{/if }} class="float-right slat-dropdown">    
+    <span {{#if id }}data-toggle="virtual-document-slat-{{ id }}-dropdown"{{/if }} class="float-right slat-dropdown">
       {{> icons.icon-base icon="more-vert" fill="darker-gray" size="sm-medium" classes="slat-secondary-more"}}
-      
+
       {{#if id }}
         {{> components.dropdown type="panel" classes="left" items=@root.dropdown.document-virtual-doc id=(concatMultiple "virtual-document-slat-" id "-dropdown") }}
       {{/if }}
