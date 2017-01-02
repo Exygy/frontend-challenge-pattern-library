@@ -12,12 +12,14 @@
     }
 
     &.search-box-close-icon {
+      cursor: pointer;
       right: 1rem;
     }
   }
 }
 
 .search-box {
+  @include scut-padding(n 2.5rem);
   display: block;
   font-size: 1rem;
   font-weight: $font-weight-semi;
