@@ -15,7 +15,12 @@ function init() {
     disableSubmit ? submitButton.attr('disabled', '') : submitButton.removeAttr('disabled');
   }
 
-  // Update button state on task reveal form input updates
+  // Initially set form button states
+  $('form').each(function() {
+    updateSubmitButtonState($(this));
+  });
+
+  // Update button state on login form input updates
   $('.login-box-form input[required]').on('keyup change', function() {
 		updateSubmitButtonState($(this).closest('.login-box-form'));
   })

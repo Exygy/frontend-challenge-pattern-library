@@ -13,10 +13,7 @@
 
 .login-box-symbol {
   @include scut-center-transform(x);
-  @include scut-padding(rem-calc(11) rem-calc(13));
   background-color: $white;
-  border: 2px solid $darkest-blue;
-  border-radius: 50%;
   top: 19px;
   z-index: 10;
 }
