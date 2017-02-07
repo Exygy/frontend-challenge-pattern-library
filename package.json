@@ -5,8 +5,8 @@
   "main": "README.md",
   "scripts": {
     "gulp": "gulp",
-
-    "build": "npm install  && bower install",
+    "prestart": "npm install && bower install",
+    "build": "npm install && gulp",
     "start": "gulp --dev",
     "test": "npm run build"
   },
